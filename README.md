@@ -9,7 +9,7 @@ pastefy is an API for [Pastefy.ga](https://pastefy.ga/).
 ## Install the package📥
 
 ```bash
-npm install anyrandom
+npm install pastefy
 ```
 
 # Functions📚
