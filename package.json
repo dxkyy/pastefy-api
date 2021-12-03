@@ -1,0 +1,28 @@
+{
+  "name": "pastefy",
+  "version": "1.0.0",
+  "description": "Pastefy API for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dxkyy",
+  "license": "ISC",
+  "dependencies": {
+    "anyrandom": "^1.2.0",
+    "node-fetch": "^2.6.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxkyy/pastefy-api.git"
+  },
+  "keywords": [
+    "api",
+    "paste"
+  ],
+  "bugs": {
+    "url": "https://github.com/dxkyy/pastefy-api/issues"
+  },
+  "homepage": "https://github.com/dxkyy/pastefy-api#readme"
+}
