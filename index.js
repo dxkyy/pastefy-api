@@ -88,14 +88,14 @@ async function getTitle(id) {
   }
 }
 
-async function getCreated(id) {
+async function folder(id) {
   if (!id) {
     return undefined;
   }
-  const response = await fetch(`https://pastefy.ga/api/v2/paste/${id}`);
+  const response = await fetch(`https://pastefy.ga/api/v2/folder/${id}`);
   const data = await response.json();
   if (data.exists == true) {
-    return data.created;
+    return data;
   } else {
     return new TypeError(`Paste ${id} doesn't exist.`);
   }
@@ -106,6 +106,6 @@ module.exports = {
   get,
   rawPaste,
   getContent,
-  getCreated,
   getTitle,
+  folder,
 };

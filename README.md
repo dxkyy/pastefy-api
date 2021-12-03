@@ -2,14 +2,12 @@
 
 pastefy is an API for [Pastefy.ga](https://pastefy.ga/).
 
-
-
 ![image](https://dxkyy.kill-all.men/5hjwhGlQh.png)
 
 ## Install the package📥
 
 ```bash
-npm install anyrandom
+npm install pastefy
 ```
 
 # Functions📚
@@ -20,7 +18,7 @@ npm install anyrandom
 const { paste } = require("pastefy");
 
 const result = await paste("Title", "Content");
-console.log(result); 
+console.log(result);
 ```
 
 ##### Output
@@ -33,7 +31,6 @@ at3vJTnP
 
 ```js
 const { rawPaste } = require("pastefy");
-
 
 const result = await rawPaste("Title", "Content");
 console.log(result);
@@ -114,10 +111,10 @@ NPM API for https://pastefy.ga/
 ### Get Created At🔎
 
 ```js
-const { getCreated } = require("pastefy");
+const { get } = require("pastefy");
 
-const result = await getCreated("Wz6OMvdT");
-console.log(result);
+const result = await get("Wz6OMvdT");
+console.log(result.created);
 ```
 
 ###### Output
@@ -126,4 +123,80 @@ console.log(result);
 2021-12-03 15:51:27.0
 ```
 
+### Get Folder📁
 
+```js
+const { folder } = require("pastefy");
+
+const result = await folder("u3jEjS4v");
+console.log(result);
+```
+
+###### Output
+
+```bash
+{
+  user_id: 'KSdtLPTK',
+  children: [],
+  name: 'demo',
+  exists: true,
+  id: 'u3jEjS4v',
+  pastes: [
+    {
+      folder: 'u3jEjS4v',
+      encrypted: false,
+      user_id: 'KSdtLPTK',
+      created: '2021-12-03 16:57:52.0',
+      exists: true,
+      id: 'AfUkFhzh',
+      title: 'Demo Paste',
+      type: 'PASTE',
+      content: 'NPM API for https://pastefy.ga/',
+      raw_url: '/AfUkFhzh/raw'
+    }
+  ]
+}
+```
+
+### Get Folder name📁
+
+```js
+const { folder } = require("pastefy");
+
+const result = await folder("u3jEjS4v");
+console.log(result.name);
+```
+
+###### Output
+
+```bash
+demo
+```
+
+### Get Folder pastes📁
+
+```js
+const { folder } = require("pastefy");
+
+const result = await folder("u3jEjS4v");
+console.log(result.pastes); //return an array
+```
+
+###### Output
+
+```bash
+[
+  {
+    folder: 'u3jEjS4v',
+    encrypted: false,
+    user_id: 'KSdtLPTK',
+    created: '2021-12-03 16:57:52.0',
+    exists: true,
+    id: 'AfUkFhzh',
+    title: 'Demo Paste',
+    type: 'PASTE',
+    content: 'NPM API for https://pastefy.ga/',
+    raw_url: '/AfUkFhzh/raw'
+  }
+]
+```
