@@ -1,0 +1,27 @@
+{
+	"name": "pastefy",
+	"version": "2.0.0",
+	"description": "Pastefy API Wrapper for nodejs",
+	"main": "./dist/index.js",
+	"typings": "./typings.d.ts",
+	"scripts": {
+		"compile": "tsc -w --outDir dist --rootDir src --skipLibCheck"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dxkyy/pastefy-api.git"
+	},
+	"keywords": [
+		"api",
+		"paste"
+	],
+	"bugs": {
+		"url": "https://github.com/dxkyy/pastefy-api/issues"
+	},
+	"homepage": "https://github.com/dxkyy/pastefy-api#readme",
+	"author": "dxkyy",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.4.0"
+	}
+}
